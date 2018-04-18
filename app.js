@@ -51,10 +51,8 @@ let router = require('./routes');
 app.use(router);
 
 // --- Error Handling Middleware ---
-// See, expressjs.com/en/guide/error-handling.html
 app.use((err, req, res, next) => {
 	console.log(`Error: ${err.message} @ ${err.fileName}`);
-
   res
     .status(err.status || 500)
     .render('index.html', {
