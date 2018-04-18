@@ -22,7 +22,7 @@ let MongoStore = require('connect-mongo')(session);
 
 // --- Define Session and Session Store ---
 app.use(session({
-	secret: "let's use status update",
+	secret: ,
 	resave: false,
 	saveUninitialized: true,
 	store: new MongoStore({
