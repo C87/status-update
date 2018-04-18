@@ -1,0 +1,34 @@
+<nav>
+  <div class="nav">
+  		<a href="/account">
+  			<i class="material-icons navIconLeft">menu</i>
+  		</a>
+      <a href="/status">
+        <i class="material-icons navIconRight">chat_bubble_outline</i>
+      </a>
+  </div>
+</nav>
+{% if notice %}
+<div class="notice">{{ notice }}</div>
+{% endif %}
+{% for item in array -%}
+<article class="article">
+	<a href="{{ item.profileUrl }}" class="user">
+		<span class="name">{{ item.name }}</span>
+		<span class="username">{{ item.username }}</span>
+	</a>
+	<a href="{{ item.postUrl }}" class="content">
+		<div class="text">{{ item.text }}</div>
+		<div class="comments">
+			<span class="commentsIcon"><i class="material-icons">chat_bubble_outline</i></span>
+				<span class="commentsCount">{{ item.comments }}</span>
+		</div>
+	</a>
+</article>
+{%- endfor %}
+
+<button id="fetch">Show More</button>
+
+{% if script %}
+<script src="{{ script }}"></script>
+{% endif %}

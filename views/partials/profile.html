@@ -1,0 +1,29 @@
+<nav>
+  <div class="nav">
+  		<a href="/">
+  			<i class="material-icons navIconLeft">home</i>
+  		</a>
+  </div>
+</nav>
+<div class="profile">
+	<h1 class="profileName">{{ name }}</h1>
+	<h3 class="profileUsername">@{{ username }}</h3>
+</div>
+{% for item in posts -%}
+<article class="article">
+	<div class="user">
+		<span class="name">{{ item.name }}</span>
+		<span class="username">{{ item.username }}</span>
+	</div>
+
+	<a href="{{ item.postUrl }}">
+		<div class="text">{{ item.text }}</div>
+		<div class="comments">
+			<span class="commentsIcon"><i class="material-icons">chat_bubble_outline</i></span>
+				<span class="commentsCount">{{ item.comments }}</span>
+		</div>
+	</a>
+</article>
+{% else %}
+<div class="note">There are no posts at this time</div>
+{%- endfor %}

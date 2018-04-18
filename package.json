@@ -1,0 +1,23 @@
+{
+  "name": "statusUpdate",
+  "version": "1.0.0",
+  "description": "social media, post a status, comment on other peoples statuses",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shaun",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "connect-mongo": "^2.0.1",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "mongodb": "^3.0.4",
+    "mongoose": "^5.0.9",
+    "nodemon": "^1.17.2",
+    "nunjucks": "^3.1.2",
+    "validator": "^9.4.1"
+  }
+}

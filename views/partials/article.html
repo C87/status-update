@@ -1,0 +1,29 @@
+<nav>
+  <div class="nav">
+  		<a href="/">
+  			<i class="material-icons navIconLeft">home</i>
+  		</a>
+  </div>
+</nav>
+<article class="article">
+	<a href="/{{ username }}" class="user">
+		<span class="name">{{ user }}</span>
+		<span class="username">@{{ username }}</span>
+	</a>
+	<div class="text">{{ text }}</div>
+</article>
+
+<form method="post" class="newComment">
+	<input type="text" name="comment" placeholder="Add a comment..."></input>
+  <button>Post Comment</button>
+</form>
+
+{% for item in comments %}
+<div class="comment">
+	<a href="/{{ item.username }}">
+		<span class="comment_name">{{ item.name }}</span>
+		<span class="comment_username">{{ item.username }}</span>
+		<span class="comment_text">{{ item.text }}</span>
+	</a>
+</div>
+{% endfor %}

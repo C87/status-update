@@ -1,0 +1,10 @@
+{% if notice %}
+<div class="notice">{{ notice }}</div>
+{% endif %}
+<form method="post" class="onboard">
+	<input type="text" name="email" placeholder="Email">
+	<input type="password" name="password" placeholder="Password">
+	<button>Log In</button>
+</form>
+<a href="/password-reset" class="password_query">Forgot password?</a>
+<a href="/signup" class="switch">Sign up</a>
