@@ -8,9 +8,9 @@ Signup, post a status, and/or comment on other peoples statuses.
 
 ## Getting Started
 
-$ git clone https://github.com/C87/status-update.git
-$ cd status-update
-npm install
+    $ git clone https://github.com/C87/status-update.git
+    $ cd status-update
+    $ npm install
 
 ## License
 
